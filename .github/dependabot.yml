@@ -1,0 +1,38 @@
+version: 2
+
+# Weekly version updates. Minor and patch updates land in one grouped PR per ecosystem;
+# major updates get their own PRs. .github/workflows/dependabot-auto-merge.yml squash-merges
+# minor and patch updates once the required checks pass, and leaves majors for review.
+# The cooldown holds back releases younger than a few days.
+
+updates:
+  - package-ecosystem: npm
+    directory: /
+    schedule:
+      interval: weekly
+    cooldown:
+      default-days: 3
+    commit-message:
+      prefix: build
+      include: scope
+    groups:
+      # react, react-dom and their types only work at matching versions.
+      react:
+        patterns: ["react", "react-dom", "@types/react", "@types/react-dom"]
+      next:
+        patterns: ["next", "eslint-config-next"]
+      site:
+        update-types: [minor, patch]
+
+  - package-ecosystem: github-actions
+    directory: /
+    schedule:
+      interval: weekly
+    cooldown:
+      default-days: 3
+    commit-message:
+      prefix: ci
+      include: scope
+    groups:
+      actions:
+        update-types: [minor, patch]
