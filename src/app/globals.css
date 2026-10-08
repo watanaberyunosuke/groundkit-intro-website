@@ -34,6 +34,7 @@
   --color-brand: var(--brand);
   --color-brand-foreground: var(--brand-foreground);
   --color-brand-strong: var(--brand-strong);
+  --color-brand-sky: var(--brand-sky);
   --color-status-ok: var(--status-ok);
   --color-status-caution: var(--status-caution);
   --color-status-warning: var(--status-warning);
@@ -49,13 +50,17 @@
 
 :root {
   --radius: 0.625rem;
-  /* GroundKit hi-vis orange. Text in brand colour uses --brand-strong for contrast. */
-  --brand: oklch(0.72 0.18 50);
-  --brand-foreground: oklch(0.18 0.02 50);
-  --brand-strong: oklch(0.55 0.17 45);
-  --status-ok: oklch(0.65 0.17 150);
-  --status-caution: oklch(0.75 0.16 70);
-  --status-warning: oklch(0.6 0.21 27);
+  /* GroundKit light blue to navy (DESIGN.md in the aviation repo). --brand is navy #0B3D91,
+     --brand-strong is the link blue #2563EB, --brand-sky #38BDF8 is decoration only. */
+  --brand: oklch(0.386 0.148 260.7);
+  --brand-foreground: oklch(1 0 0);
+  --brand-strong: oklch(0.546 0.215 262.9);
+  --brand-sky: oklch(0.754 0.139 232.7);
+  --brand-gradient: linear-gradient(135deg, #1659b8, #0b3d91 70%);
+  /* Status: #15803D, #B45309, #C81E1E; each passes 4.5:1 with white. */
+  --status-ok: oklch(0.527 0.137 150.1);
+  --status-caution: oklch(0.555 0.146 49);
+  --status-warning: oklch(0.535 0.203 27.6);
   --background: oklch(1 0 0);
   --foreground: oklch(0.145 0 0);
   --card: oklch(1 0 0);
@@ -90,17 +95,22 @@
 }
 
 .dark {
-  --brand: oklch(0.74 0.17 52);
-  --brand-foreground: oklch(0.18 0.02 50);
-  --brand-strong: oklch(0.8 0.15 60);
-  --status-ok: oklch(0.72 0.17 150);
-  --status-caution: oklch(0.8 0.15 75);
-  --status-warning: oklch(0.68 0.19 25);
-  --background: oklch(0.18 0 0);
+  /* Dark: light blue #60A5FA with navy #0B1B36 text on it. */
+  --brand: oklch(0.714 0.143 254.6);
+  --brand-foreground: oklch(0.225 0.057 260.2);
+  --brand-strong: oklch(0.714 0.143 254.6);
+  --brand-sky: oklch(0.828 0.101 230.3);
+  --brand-gradient: linear-gradient(135deg, #7dd3fc, #60a5fa 70%);
+  /* Status: #22C55E, #FBBF24, #F87171. */
+  --status-ok: oklch(0.723 0.192 149.6);
+  --status-caution: oklch(0.837 0.164 84.4);
+  --status-warning: oklch(0.711 0.166 22.2);
+  /* Neutrals match the dashboard's dark theme: #121417 page, #1B1E23 cards. */
+  --background: oklch(0.19 0.007 258.4);
   --foreground: oklch(0.985 0 0);
-  --card: oklch(0.205 0 0);
+  --card: oklch(0.234 0.011 260.7);
   --card-foreground: oklch(0.985 0 0);
-  --popover: oklch(0.205 0 0);
+  --popover: oklch(0.234 0.011 260.7);
   --popover-foreground: oklch(0.985 0 0);
   --primary: oklch(0.922 0 0);
   --primary-foreground: oklch(0.205 0 0);
@@ -142,4 +152,8 @@
   body {
     @apply bg-background text-foreground;
   }
+}
+
+@utility bg-brand-gradient {
+  background-image: var(--brand-gradient);
 }

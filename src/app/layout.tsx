@@ -1,5 +1,5 @@
 import type { Metadata, Viewport } from "next";
-import { Geist, Geist_Mono } from "next/font/google";
+import { Geist_Mono, Inter } from "next/font/google";
 import { Analytics } from "@vercel/analytics/next";
 
 import { SiteFooter } from "@/components/site-footer";
@@ -9,7 +9,8 @@ import { SITE } from "@/data/site";
 import { cn } from "@/lib/utils";
 import "./globals.css";
 
-const geist = Geist({
+// Inter, as on the dashboard, so the site and the dashboard read as one product.
+const inter = Inter({
   subsets: ["latin"],
   variable: "--font-sans",
   weight: ["400", "500", "600", "700"],
@@ -47,7 +48,7 @@ export const metadata: Metadata = {
 export const viewport: Viewport = {
   themeColor: [
     { media: "(prefers-color-scheme: light)", color: "#ffffff" },
-    { media: "(prefers-color-scheme: dark)", color: "#1f1f1f" },
+    { media: "(prefers-color-scheme: dark)", color: "#121417" },
   ],
 };
 
@@ -58,7 +59,7 @@ export default function RootLayout({
 }>) {
   return (
     <html lang="en-AU" suppressHydrationWarning>
-      <body className={cn("min-h-screen bg-background font-sans antialiased", geist.variable, geistMono.variable)}>
+      <body className={cn("min-h-screen bg-background font-sans antialiased", inter.variable, geistMono.variable)}>
         <ThemeProvider attribute="class" defaultTheme="system" enableSystem disableTransitionOnChange>
           <a
             href="#main"

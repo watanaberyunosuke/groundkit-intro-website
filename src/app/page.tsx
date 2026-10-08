@@ -58,7 +58,7 @@ export default function Home() {
             className="h-full w-full"
             squareSize={3}
             gridGap={5}
-            color="var(--brand)"
+            color="var(--brand-sky)"
             maxOpacity={0.25}
             style={{
               maskImage: "linear-gradient(to bottom, black, transparent)",
@@ -287,7 +287,7 @@ export default function Home() {
 
       {/* Advisory + CTA */}
       <section className="mx-auto w-full max-w-6xl px-4 pb-24 sm:px-6">
-        <div className="relative overflow-hidden rounded-2xl bg-brand px-6 py-12 text-brand-foreground sm:px-12">
+        <div className="relative overflow-hidden rounded-2xl bg-brand bg-brand-gradient px-6 py-12 text-brand-foreground sm:px-12">
           <div className="grid gap-8 lg:grid-cols-[1.4fr_1fr] lg:items-center">
             <div className="space-y-3">
               <h2 className="text-3xl font-semibold tracking-tight text-balance">
