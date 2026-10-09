@@ -2,7 +2,8 @@ import Link from "next/link";
 
 import { Logo } from "@/components/logo";
 import { ModeToggle } from "@/components/mode-toggle";
-import { NAV } from "@/data/site";
+import { Button } from "@/components/ui/button";
+import { NAV, SITE } from "@/data/site";
 
 export function SiteHeader() {
   return (
@@ -25,6 +26,10 @@ export function SiteHeader() {
             ))}
           </ul>
           <ModeToggle />
+          {/* Accounts are optional and live on the dashboard, which opens its sign-in dialog. */}
+          <Button asChild variant="outline" size="sm" className="ml-1">
+            <a href={`${SITE.dashboardUrl}/?account=signin`}>Sign in</a>
+          </Button>
         </nav>
       </div>
     </header>
