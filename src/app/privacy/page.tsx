@@ -12,16 +12,48 @@ export default function PrivacyPage() {
   return (
     <ProsePage
       title="Privacy"
-      intro="GroundKit has no accounts, no advertising and no tracking in the apps. This page explains what the apps read, where it is kept and what leaves your device."
-      updated="8 October 2026"
+      intro="GroundKit accounts are optional, and the apps have no advertising or tracking. This page explains what the apps read, where it is kept and what leaves your device."
+      updated="9 October 2026"
     >
       <h2>Summary</h2>
       <ul>
-        <li>No sign-up and no account. The apps do not know who you are.</li>
+        <li>An account is optional. Without one, the apps and the dashboard do not know who you are. With one, GroundKit keeps your email address, an optional name and your synced settings, and you can delete them at any time.</li>
         <li>Health data stays on your device (Android) or on your device and your own iCloud (iPhone and iPad). It is never sent to GroundKit.</li>
         <li>Your location is used only while a map is on screen, only after you allow it, and is never stored or sent.</li>
         <li>The apps contain no analytics, advertising or crash-reporting libraries.</li>
       </ul>
+
+      <h2>Accounts</h2>
+      <p>
+        You can use the apps and the dashboard without an account. An account only syncs your settings between
+        GroundKit on iPhone, Android and the web.
+      </p>
+      <ul>
+        <li>
+          <strong>What is kept:</strong> your email address, the name you give (optional), how you sign in (email and
+          password, Apple, Google or Microsoft) and these settings: home airport, theme or appearance, keep screen on,
+          glove mode, wind limits, and the dashboard&apos;s layout and home clock.
+        </li>
+        <li>
+          <strong>What is not:</strong> health data, your location, your age, turnarounds, shifts and handover notes.
+          They stay on your device (and your own iCloud on iPhone and iPad) as described below.
+        </li>
+        <li>
+          <strong>Signing in with Apple, Google or Microsoft:</strong> that provider tells GroundKit your email address
+          and, if you allow it, your name. With Sign in with Apple you can hide your email address.
+        </li>
+        <li>
+          <strong>Where it is kept:</strong> with Supabase, the hosted database and sign-in service GroundKit uses.
+          Passwords are stored as hashes, not as text. On your device, the sign-in session is kept in the iOS Keychain
+          or encrypted with an Android Keystore key, and is not included in backups.
+        </li>
+        <li>
+          <strong>Deleting it:</strong> in either app, open Settings, then your account, then Delete account; on the
+          dashboard, open your account, then Delete account. This removes your account, name and synced settings straight away. Settings already on your
+          devices stay there.
+        </li>
+      </ul>
+      <p>GroundKit does not sell account data, use it for advertising or share it with anyone else.</p>
 
       <h2>Health data</h2>
       <p>
@@ -64,6 +96,7 @@ export default function PrivacyPage() {
           The GroundKit data API on Vercel, asking for an airport&apos;s conditions, history and nearby traffic. The
           request contains the airport code, not anything about you.
         </li>
+        <li>Supabase, only if you sign in, to sign you in and sync your settings.</li>
         <li>
           OpenStreetMap&apos;s Overpass servers for airport layouts, which are downloaded once per airport, and Apple
           Maps (iPhone and iPad) or Esri map tiles (Android) for the base map.
