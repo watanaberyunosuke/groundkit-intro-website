@@ -3,8 +3,8 @@ export const SITE = {
   tagline: "The ramp, apron and cargo crew companion",
   description:
     "GroundKit puts ramp weather, arrivals and departures, live traffic, turnaround checklists and shift wellbeing in one app built for working outside. For iPhone, iPad and Android.",
-  url: process.env.NEXT_PUBLIC_SITE_URL ?? "https://groundkit-intro-website.vercel.app",
-  dashboardUrl: "https://motherduck-aviation-data-analysis.vercel.app",
+  url: process.env.NEXT_PUBLIC_SITE_URL ?? "https://groundkit.harrydatahub.com",
+  dashboardUrl: "https://groundkit-dashboard.harrydatahub.com",
   repos: {
     ios: "https://github.com/watanaberyunosuke/groundkit-ios",
     android: "https://github.com/watanaberyunosuke/groundkit-android",

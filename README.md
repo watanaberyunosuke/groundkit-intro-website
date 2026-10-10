@@ -23,11 +23,18 @@ yarn lint
 yarn build
 ```
 
-`NEXT_PUBLIC_SITE_URL` sets the canonical URL used in metadata and Open Graph tags; without it the Vercel production URL is used.
+`NEXT_PUBLIC_SITE_URL` sets the canonical URL used in metadata and Open Graph tags; without it `https://groundkit.harrydatahub.com` is used.
 
 ## Deploy
 
-The Vercel project is connected to this repository: pushes to `main` deploy to production and pull requests get preview deployments. Vercel Web Analytics is enabled through `@vercel/analytics`.
+The Vercel project is connected to this repository: pushes to `main` deploy to production and pull requests get preview deployments.
+
+| Domain | Serves |
+|---|---|
+| `groundkit.harrydatahub.com` | This site |
+| `groundkit-dashboard.harrydatahub.com` | The dashboard (`SITE.dashboardUrl`); the header's Sign in opens its sign-in dialog |
+
+Brand colours, type and the logo follow `DESIGN.md` in the data platform repository. Vercel Web Analytics is enabled through `@vercel/analytics`.
 
 ## Licence
 
