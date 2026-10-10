@@ -13,7 +13,7 @@ export default function PrivacyPage() {
     <ProsePage
       title="Privacy"
       intro="GroundKit accounts are optional, and the apps have no advertising or tracking. This page explains what the apps read, where it is kept and what leaves your device."
-      updated="9 October 2026"
+      updated="10 October 2026"
     >
       <h2>Summary</h2>
       <ul>
@@ -31,7 +31,7 @@ export default function PrivacyPage() {
       <ul>
         <li>
           <strong>What is kept:</strong> your email address, the name you give (optional), how you sign in (email and
-          password, Apple, Google or Microsoft) and these settings: home airport, theme or appearance, keep screen on,
+          password, or Google) and these settings: home airport, theme or appearance, keep screen on,
           glove mode, wind limits, and the dashboard&apos;s layout and home clock.
         </li>
         <li>
@@ -39,8 +39,8 @@ export default function PrivacyPage() {
           They stay on your device (and your own iCloud on iPhone and iPad) as described below.
         </li>
         <li>
-          <strong>Signing in with Apple, Google or Microsoft:</strong> that provider tells GroundKit your email address
-          and, if you allow it, your name. With Sign in with Apple you can hide your email address.
+          <strong>Signing in with Google:</strong> Google tells GroundKit your email address and, if you allow it, your
+          name.
         </li>
         <li>
           <strong>Where it is kept:</strong> with Supabase, the hosted database and sign-in service GroundKit uses.
