@@ -8,7 +8,7 @@ export const SITE = {
   repos: {
     ios: "https://github.com/watanaberyunosuke/groundkit-ios",
     android: "https://github.com/watanaberyunosuke/groundkit-android",
-    data: "https://github.com/watanaberyunosuke/motherduck-aviation-data-analysis",
+    data: "https://github.com/watanaberyunosuke/groundkit-dashboard",
     website: "https://github.com/watanaberyunosuke/groundkit-intro-website",
   },
   issuesUrl: "https://github.com/watanaberyunosuke/groundkit-intro-website/issues",
