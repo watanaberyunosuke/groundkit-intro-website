@@ -7,7 +7,8 @@ export const size = { width: 1200, height: 630 };
 export const contentType = "image/png";
 
 const WHITE = "#FFFFFF";
-const NAVY = "#0B3D91";
+const NAVY = "#0F1F3D";
+const SIGNAL = "#F4C400";
 
 export default function OpengraphImage() {
   return new ImageResponse(
@@ -20,14 +21,14 @@ export default function OpengraphImage() {
           flexDirection: "column",
           justifyContent: "space-between",
           padding: 72,
-          background: `linear-gradient(135deg, #1659B8, ${NAVY} 70%)`,
+          background: NAVY,
           color: WHITE,
           fontFamily: "sans-serif",
         }}
       >
         <div style={{ display: "flex", alignItems: "center", gap: 24 }}>
           <svg width="96" height="96" viewBox="0 0 100 100">
-            <rect width="100" height="100" rx="22" fill="#0F1F3D" stroke={WHITE} strokeOpacity={0.35} strokeWidth="2" />
+            <rect width="100" height="100" rx="22" fill="#0F1F3D" stroke={WHITE} strokeOpacity={0.25} strokeWidth="2" />
             <g transform="translate(50 50) scale(0.9) translate(-54.9 -43.65)">
               <path d="M32 38.5 L20.6 20.2 C20.1 19.5 19.4 19 18.5 19 L15.2 19 C14.4 19 13.8 19.7 13.9 20.5 L15.6 38.5 Z" fill="#ffffff" />
               <path d="M20 38 L68 38 C75.5 38 81.4 41.8 83.4 46.4 C84.4 49.6 82.2 52.5 78 52.5 L34 52.5 C26 52.5 18.5 47.6 12.9 43.1 C12 42.4 12.2 41.1 13.2 40.6 C15.1 39 17.4 38 20 38 Z" fill="#ffffff" />
@@ -59,9 +60,13 @@ export default function OpengraphImage() {
               <rect x="11" y="67.2" width="87" height="1.1" rx="0.55" fill="#8796ad" fillOpacity={0.4}/>
             </g>
           </svg>
-          <div style={{ fontSize: 64, fontWeight: 700, letterSpacing: -2 }}>{SITE.name}</div>
+          <div style={{ display: "flex", fontSize: 64, letterSpacing: -1 }}>
+            <span style={{ fontWeight: 800 }}>Ground</span>
+            <span style={{ fontWeight: 500 }}>Kit</span>
+          </div>
         </div>
         <div style={{ display: "flex", flexDirection: "column", gap: 20 }}>
+          <div style={{ width: 96, height: 10, borderRadius: 5, background: SIGNAL }} />
           <div style={{ fontSize: 72, fontWeight: 700, lineHeight: 1.05, letterSpacing: -2, maxWidth: 980 }}>
             Everything the ramp needs to know, in one glance.
           </div>

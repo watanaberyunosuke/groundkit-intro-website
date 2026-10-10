@@ -2,11 +2,16 @@ import { cn } from "@/lib/utils";
 
 /**
  * The GroundKit mark: a tug pushing back an aircraft, seen from the side. White aircraft and yellow
- * tug on a navy tile in both themes, the same artwork as the favicon (src/app/icon.svg).
+ * tug on a navy tile in both themes, the same artwork as the favicon (src/app/icon.svg). On the dark
+ * navy page a faint outline keeps the tile's edge visible.
  */
 export function LogoMark({ className }: { readonly className?: string }) {
   return (
-    <svg viewBox="0 0 100 100" aria-hidden="true" className={cn("size-8", className)}>
+    <svg
+      viewBox="0 0 100 100"
+      aria-hidden="true"
+      className={cn("size-8 shrink-0 rounded-[22%] dark:ring-1 dark:ring-white/20", className)}
+    >
       <rect width="100" height="100" rx="22" fill="#0f1f3d" />
       <g transform="translate(50 50) scale(0.9) translate(-54.9 -43.65)">
         <path d="M32 38.5 L20.6 20.2 C20.1 19.5 19.4 19 18.5 19 L15.2 19 C14.4 19 13.8 19.7 13.9 20.5 L15.6 38.5 Z" fill="#ffffff" />
@@ -42,11 +47,21 @@ export function LogoMark({ className }: { readonly className?: string }) {
   );
 }
 
+/** The wordmark: "Ground" heavy and "Kit" medium, in expanded Archivo. */
+export function Wordmark({ className }: { readonly className?: string }) {
+  return (
+    <span className={cn("font-display tracking-tight [font-stretch:125%]", className)}>
+      <span className="font-extrabold">Ground</span>
+      <span className="font-medium">Kit</span>
+    </span>
+  );
+}
+
 export function Logo({ className }: { readonly className?: string }) {
   return (
-    <span className={cn("inline-flex items-center gap-2 font-semibold tracking-tight", className)}>
+    <span className={cn("inline-flex items-center gap-2.5", className)}>
       <LogoMark />
-      <span className="text-lg">GroundKit</span>
+      <Wordmark className="text-lg" />
     </span>
   );
 }

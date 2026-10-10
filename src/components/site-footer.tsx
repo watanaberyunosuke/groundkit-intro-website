@@ -1,6 +1,6 @@
 import Link from "next/link";
 
-import { LogoMark } from "@/components/logo";
+import { Logo } from "@/components/logo";
 import { SITE } from "@/data/site";
 
 const LINKS = [
@@ -17,10 +17,7 @@ export function SiteFooter() {
     <footer className="border-t border-border/60">
       <div className="mx-auto flex w-full max-w-6xl flex-col gap-6 px-4 py-10 sm:px-6 md:flex-row md:items-start md:justify-between">
         <div className="max-w-sm space-y-2">
-          <div className="flex items-center gap-2 font-semibold">
-            <LogoMark className="size-6" />
-            GroundKit
-          </div>
+          <Logo />
           <p className="text-sm text-muted-foreground">
             Advisory only. Ramp closures, lightning alerts and wind limits are the airport&apos;s and airline&apos;s
             call; follow local procedures.

@@ -42,7 +42,7 @@ function SectionHeading({ eyebrow, title, intro }: { eyebrow: string; title: str
   return (
     <div className="max-w-2xl space-y-3">
       <p className="text-sm font-semibold uppercase tracking-wider text-brand-strong">{eyebrow}</p>
-      <h2 className="text-3xl font-semibold tracking-tight text-balance sm:text-4xl">{title}</h2>
+      <h2 className="text-3xl font-bold tracking-tight text-balance sm:text-4xl">{title}</h2>
       {intro ? <p className="text-lg text-muted-foreground text-pretty">{intro}</p> : null}
     </div>
   );
@@ -58,8 +58,8 @@ export default function Home() {
             className="h-full w-full"
             squareSize={3}
             gridGap={5}
-            color="var(--brand-sky)"
-            maxOpacity={0.25}
+            color="var(--brand-strong)"
+            maxOpacity={0.12}
             style={{
               maskImage: "linear-gradient(to bottom, black, transparent)",
               WebkitMaskImage: "linear-gradient(to bottom, black, transparent)",
@@ -74,8 +74,12 @@ export default function Home() {
               </Badge>
             </BlurFade>
             <BlurFade delay={0.05}>
-              <h1 className="text-4xl font-semibold tracking-tight text-balance sm:text-5xl lg:text-6xl">
-                Everything the ramp needs to know, in one glance.
+              <h1 className="text-4xl font-bold tracking-tight text-balance sm:text-5xl lg:text-6xl">
+                Everything the ramp needs to know, in{" "}
+                <span className="underline decoration-brand-signal decoration-[0.12em] underline-offset-[0.18em]">
+                  one glance
+                </span>
+                .
               </h1>
             </BlurFade>
             <BlurFade delay={0.1}>
@@ -135,7 +139,7 @@ export default function Home() {
       </section>
 
       {/* Ramp status */}
-      <section className="border-y border-border/60 bg-muted/40">
+      <section className="border-y border-border/60 bg-brand-tint">
         <div className="mx-auto grid w-full max-w-6xl gap-10 px-4 py-16 sm:px-6 lg:grid-cols-[1fr_1.2fr] lg:items-center">
           <SectionHeading
             eyebrow="Ramp status"
@@ -193,11 +197,11 @@ export default function Home() {
       </section>
 
       {/* Screens */}
-      <section aria-labelledby="screens-heading" className="border-y border-border/60 bg-muted/40">
+      <section aria-labelledby="screens-heading" className="border-y border-border/60 bg-brand-tint">
         <div className="mx-auto w-full max-w-6xl px-4 py-20 sm:px-6">
           <div className="max-w-2xl space-y-3">
             <p className="text-sm font-semibold uppercase tracking-wider text-brand-strong">On iPhone</p>
-            <h2 id="screens-heading" className="text-3xl font-semibold tracking-tight sm:text-4xl">
+            <h2 id="screens-heading" className="text-3xl font-bold tracking-tight sm:text-4xl">
               Real data, real airport.
             </h2>
             <p className="text-lg text-muted-foreground">
@@ -226,7 +230,7 @@ export default function Home() {
         />
         <dl className="mt-12 grid gap-x-10 gap-y-8 sm:grid-cols-2 lg:grid-cols-3">
           {OUTDOOR.map((o) => (
-            <div key={o.title} className="border-l-2 border-brand pl-4">
+            <div key={o.title} className="border-l-4 border-brand-signal pl-4">
               <dt className="font-semibold">{o.title}</dt>
               <dd className="mt-1 text-sm text-muted-foreground">{o.body}</dd>
             </div>
@@ -235,7 +239,7 @@ export default function Home() {
       </section>
 
       {/* Airports */}
-      <section id="airports" className="border-y border-border/60 bg-muted/40">
+      <section id="airports" className="border-y border-border/60 bg-brand-tint">
         <div className="mx-auto w-full max-w-6xl px-4 py-20 sm:px-6">
           <SectionHeading
             eyebrow="Airports"
@@ -285,34 +289,35 @@ export default function Home() {
         </p>
       </section>
 
-      {/* Advisory + CTA */}
+      {/* Advisory + CTA: flat navy in both themes, as on the logo tile, with a yellow tow-bar rule. */}
       <section className="mx-auto w-full max-w-6xl px-4 pb-24 sm:px-6">
-        <div className="relative overflow-hidden rounded-2xl bg-brand bg-brand-gradient px-6 py-12 text-brand-foreground sm:px-12">
+        <div className="relative overflow-hidden rounded-2xl bg-navy px-6 py-12 text-white sm:px-12 dark:ring-1 dark:ring-white/10">
           <div className="grid gap-8 lg:grid-cols-[1.4fr_1fr] lg:items-center">
-            <div className="space-y-3">
-              <h2 className="text-3xl font-semibold tracking-tight text-balance">
+            <div className="space-y-4">
+              <span className="block h-1.5 w-16 rounded-full bg-brand-signal" aria-hidden="true" />
+              <h2 className="text-3xl font-bold tracking-tight text-balance">
                 See today&apos;s conditions at your airport.
               </h2>
-              <p className="max-w-xl text-brand-foreground/80">
+              <p className="max-w-xl text-white/80">
                 The web dashboard runs on the same data as the apps. GroundKit for iOS and Android is coming to the App
                 Store and Google Play.
               </p>
             </div>
             <div className="flex flex-wrap gap-3 lg:justify-end">
-              <Button asChild size="lg" className="bg-brand-foreground text-brand hover:bg-brand-foreground/90">
+              <Button asChild size="lg" className="bg-white text-navy hover:bg-white/90">
                 <Link href={SITE.dashboardUrl}>Open the dashboard</Link>
               </Button>
               <Button
                 asChild
                 size="lg"
                 variant="outline"
-                className="border-brand-foreground/30 bg-transparent text-brand-foreground hover:bg-brand-foreground/10 hover:text-brand-foreground dark:bg-transparent dark:border-brand-foreground/30 dark:hover:bg-brand-foreground/10"
+                className="border-white/30 bg-transparent text-white hover:bg-white/10 hover:text-white dark:border-white/30 dark:bg-transparent dark:hover:bg-white/10"
               >
                 <Link href="/support">Get support</Link>
               </Button>
             </div>
           </div>
-          <div className="mt-10 flex items-start gap-3 border-t border-brand-foreground/20 pt-6 text-sm text-brand-foreground/80">
+          <div className="mt-10 flex items-start gap-3 border-t border-white/20 pt-6 text-sm text-white/80">
             <ShieldAlertIcon className="mt-0.5 size-4 shrink-0" aria-hidden="true" />
             <p>
               GroundKit is advisory. Ramp closures, lightning alerts and wind limits are the airport&apos;s and airline&apos;s

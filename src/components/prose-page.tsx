@@ -17,7 +17,7 @@ export function ProsePage({
   return (
     <article className={cn("mx-auto w-full max-w-3xl px-4 py-16 sm:px-6 sm:py-20", className)}>
       <header className="space-y-3 border-b pb-8">
-        <h1 className="text-4xl font-semibold tracking-tight">{title}</h1>
+        <h1 className="text-4xl font-bold tracking-tight">{title}</h1>
         {intro ? <p className="text-lg text-muted-foreground text-pretty">{intro}</p> : null}
         {updated ? <p className="text-sm text-muted-foreground">Last updated {updated}</p> : null}
       </header>
