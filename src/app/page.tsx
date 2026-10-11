@@ -138,6 +138,43 @@ export default function Home() {
         </div>
       </section>
 
+      {/* Advisory + CTA: flat navy in both themes, as on the logo tile, with a yellow tow-bar rule. */}
+      <section className="mx-auto w-full max-w-6xl px-4 pb-16 sm:px-6">
+        <div className="relative overflow-hidden rounded-2xl bg-navy px-6 py-12 text-white sm:px-12 dark:ring-1 dark:ring-white/10">
+          <div className="grid gap-8 lg:grid-cols-[1.4fr_1fr] lg:items-center">
+            <div className="space-y-4">
+              <span className="block h-1.5 w-16 rounded-full bg-brand-signal" aria-hidden="true" />
+              <h2 className="text-3xl font-bold tracking-tight text-balance">
+                See today&apos;s conditions at your airport.
+              </h2>
+              <p className="max-w-xl text-white/80">
+                The web dashboard runs on the same data as the apps. GroundKit for iOS and Android is coming to the App
+                Store and Google Play.
+              </p>
+            </div>
+            <div className="flex flex-wrap gap-3 lg:justify-end">
+              <Button asChild size="lg" className="bg-white text-navy hover:bg-white/90">
+                <Link href={SITE.dashboardUrl}>Open the dashboard</Link>
+              </Button>
+              <Button
+                asChild
+                size="lg"
+                variant="outline"
+                className="border-white/30 bg-transparent text-white hover:bg-white/10 hover:text-white dark:border-white/30 dark:bg-transparent dark:hover:bg-white/10"
+              >
+                <Link href="/support">Get support</Link>
+              </Button>
+            </div>
+          </div>
+          <div className="mt-10 flex items-start gap-3 border-t border-white/20 pt-6 text-sm text-white/80">
+            <ShieldAlertIcon className="mt-0.5 size-4 shrink-0" aria-hidden="true" />
+            <p>
+              GroundKit is advisory. Ramp closures, lightning alerts and wind limits are the airport&apos;s and airline&apos;s
+              call, and local procedures always take precedence. Wellbeing figures are guidance, not medical advice.
+            </p>
+          </div>
+        </div>
+      </section>
       {/* Ramp status */}
       <section className="border-y border-border/60 bg-brand-tint">
         <div className="mx-auto grid w-full max-w-6xl gap-10 px-4 py-16 sm:px-6 lg:grid-cols-[1fr_1.2fr] lg:items-center">
@@ -289,43 +326,6 @@ export default function Home() {
         </p>
       </section>
 
-      {/* Advisory + CTA: flat navy in both themes, as on the logo tile, with a yellow tow-bar rule. */}
-      <section className="mx-auto w-full max-w-6xl px-4 pb-24 sm:px-6">
-        <div className="relative overflow-hidden rounded-2xl bg-navy px-6 py-12 text-white sm:px-12 dark:ring-1 dark:ring-white/10">
-          <div className="grid gap-8 lg:grid-cols-[1.4fr_1fr] lg:items-center">
-            <div className="space-y-4">
-              <span className="block h-1.5 w-16 rounded-full bg-brand-signal" aria-hidden="true" />
-              <h2 className="text-3xl font-bold tracking-tight text-balance">
-                See today&apos;s conditions at your airport.
-              </h2>
-              <p className="max-w-xl text-white/80">
-                The web dashboard runs on the same data as the apps. GroundKit for iOS and Android is coming to the App
-                Store and Google Play.
-              </p>
-            </div>
-            <div className="flex flex-wrap gap-3 lg:justify-end">
-              <Button asChild size="lg" className="bg-white text-navy hover:bg-white/90">
-                <Link href={SITE.dashboardUrl}>Open the dashboard</Link>
-              </Button>
-              <Button
-                asChild
-                size="lg"
-                variant="outline"
-                className="border-white/30 bg-transparent text-white hover:bg-white/10 hover:text-white dark:border-white/30 dark:bg-transparent dark:hover:bg-white/10"
-              >
-                <Link href="/support">Get support</Link>
-              </Button>
-            </div>
-          </div>
-          <div className="mt-10 flex items-start gap-3 border-t border-white/20 pt-6 text-sm text-white/80">
-            <ShieldAlertIcon className="mt-0.5 size-4 shrink-0" aria-hidden="true" />
-            <p>
-              GroundKit is advisory. Ramp closures, lightning alerts and wind limits are the airport&apos;s and airline&apos;s
-              call, and local procedures always take precedence. Wellbeing figures are guidance, not medical advice.
-            </p>
-          </div>
-        </div>
-      </section>
     </>
   );
 }
