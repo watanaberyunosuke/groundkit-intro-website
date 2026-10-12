@@ -16,6 +16,7 @@ import {
 
 import BlurFade from "@/components/magicui/blur-fade";
 import { FlickeringGrid } from "@/components/magicui/flickering-grid";
+import { IosInstallInstructions } from "@/components/ios-install-instructions";
 import { PhoneFrame } from "@/components/phone-frame";
 import { Badge } from "@/components/ui/badge";
 import { Button } from "@/components/ui/button";
@@ -105,7 +106,7 @@ export default function Home() {
             <BlurFade delay={0.2}>
               <ul className="flex flex-wrap gap-x-6 gap-y-2 text-sm text-muted-foreground">
                 <li>
-                  <span className="font-medium text-foreground">iPhone and iPad</span> · iOS 18 or later
+                  <IosInstallInstructions /> · iPhone and iPad
                 </li>
                 <li>
                   <span className="font-medium text-foreground">Android</span> · 8.0 or later
