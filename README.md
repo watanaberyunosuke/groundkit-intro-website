@@ -1,5 +1,7 @@
 # GroundKit website
 
+[![ko-fi](https://ko-fi.com/img/githubbutton_sm.svg)](https://ko-fi.com/P5V328S6C2)
+
 The introduction and promotional site for **GroundKit**, the app for apron, ramp and cargo crews ([iOS](https://github.com/watanaberyunosuke/groundkit-ios), [Android](https://github.com/watanaberyunosuke/groundkit-android)). It also hosts the privacy policy and support page the app store listings link to.
 
 Built with Next.js (App Router), Tailwind CSS, [shadcn/ui](https://ui.shadcn.com/) and [Magic UI](https://magicui.design/), the same stack as [personal-portfolio](https://github.com/watanaberyunosuke/personal-portfolio). Deployed on Vercel.

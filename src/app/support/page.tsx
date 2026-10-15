@@ -20,6 +20,12 @@ export default function SupportPage() {
         and what you saw. A screenshot helps.
       </p>
 
+      <h2>Support the project</h2>
+      <p>
+        GroundKit is built and run by one person. If it helps on your shifts, you can{" "}
+        <a href={SITE.kofiUrl}>buy me a coffee on Ko-fi</a>. It is optional and unlocks nothing in the apps.
+      </p>
+
       <h2>Common questions</h2>
       <ul>
         <li>

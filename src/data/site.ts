@@ -12,6 +12,7 @@ export const SITE = {
     website: "https://github.com/watanaberyunosuke/groundkit-intro-website",
   },
   issuesUrl: "https://github.com/watanaberyunosuke/groundkit-intro-website/issues",
+  kofiUrl: "https://ko-fi.com/harrybwatson",
   author: "Harry Watson",
 } as const;
 

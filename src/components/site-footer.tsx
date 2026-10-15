@@ -10,6 +10,7 @@ const LINKS = [
   { href: SITE.repos.ios, label: "iOS source" },
   { href: SITE.repos.android, label: "Android source" },
   { href: SITE.repos.data, label: "Data platform" },
+  { href: SITE.kofiUrl, label: "Support on Ko-fi" },
 ];
 
 export function SiteFooter() {
